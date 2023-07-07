@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="../asset/to-do-list.svg" alt="to-do-list logo">
+        <h1>To Do List</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="all item">
+                <img class="logo" src="../asset/calendar.svg" alt="all logo">
+                <span class="text">All</span>
+            </div>
+            <div class="today item">
+                <img src="../asset/today.svg" alt="today logo" class="logo">
+                <span class="text">Today</span>
+            </div>
+            <div class="week item">
+                <img src="../asset/week.svg" alt="week logo" class="logo">
+                <span class="text">Week</span>
+            </div>
+            <div class="important item">
+                <img src="../asset/important.svg" alt="important logo" class="logo">
+                <span class="text">Important</span>
+            </div>
+            <div class="completed item">
+                <img src="../asset/completed.svg" alt="completed logo" class="logo">
+                <span class="text">Completed</span>
+            </div>
+            <div class="item add" id="Add-popup">
+                <img src="../asset/add.svg" class="logo">
+                <span class="text">Add New Plan</span>
+            </div>
+        </div>
+        <div class="display">
+            <p class="title"></p>
+            <div class="modal-container">
+                <form action="submit">
+                    <header class="modal-header">Add New Plan</header>
+                    <div class="add-container">
+                        <div class="add-sidebar">
+                            <div class="todo">To do</div>
+                            <div class="project">Project</div>
+                        </div>
+                        <div class="add-input">
+                            <textarea class="add-title input" placeholder="Title:....." cols="70" rows="1"></textarea>
+                            <textarea class="add-content input" placeholder="Write something" rows="14"
+                                cols="70"></textarea>
+                            <div class="bottom-infor">
+                                <div class="due-date">
+                                    <label for="dueday-input">Due Date:</label>
+                                    <input type="date" class="dueday-input input" value="today">
+                                </div>
+                                <div class="bottom">
+                                    <div class="priority-input">
+                                        <p>Priority:</p>
+                                        <div class="important-btn">Important</div>
+                                    </div>
+                                    <button class="add-todo" type="submit">ADD TO DO</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="content-container"></div> fix it with js later-->
+        </div>
+    </div>
+
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
