@@ -42,8 +42,9 @@
         </div>
         <div class="display">
             <p class="title"></p>
+            <div class="content-container"></div>
             <div class="modal-container">
-                <form action="submit">
+                <form id="form" action="submit">
                     <header class="modal-header">Add New Plan</header>
                     <div class="add-container">
                         <div class="add-sidebar">
@@ -56,13 +57,13 @@
                                 cols="70"></textarea>
                             <div class="bottom-infor">
                                 <div class="due-date">
-                                    <label for="dueday-input">Due Date:</label>
-                                    <input type="date" class="dueday-input input" value="today">
+                                    <label for="duedate-input">Due Date:</label>
+                                    <input type="date" class="duedate-input input" value="today">
                                 </div>
                                 <div class="bottom">
                                     <div class="priority-input">
                                         <p>Priority:</p>
-                                        <div class="important-btn">Important</div>
+                                        <button class="important-btn" type="button">Important</button>
                                     </div>
                                     <button class="add-todo" type="submit">ADD TO DO</button>
                                 </div>
@@ -71,8 +72,6 @@
                     </div>
                 </form>
             </div>
-            <!-- <div class="content-container"></div> fix it with js later-->
-        </div>
     </div>
 
 

@@ -13,6 +13,7 @@
       background-color: rgb(181, 201, 154);
       width: 100vw;
       height: 100vh;
+      overflow: hidden;
   }
 
   .container {
@@ -36,7 +37,7 @@
       flex-direction: column;
       gap: 1em;
       width: 17vw;
-      height: 85vh;
+      height: 86vh;
       border-radius: 0 5px 5px 0;
       background-color: #9A9EC9;
   }
@@ -82,18 +83,17 @@
   .title {
       margin: 10px;
       width: fit-content;
-      height: 100%;
   }
 
   .content-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(5, minmax(250px, 1fr));
+      grid-template-rows: repeat(2, minmax(200px, 1fr));
       gap: 50px;
   }
 
   .card {
-      width: auto;
-      height: auto;
+
       padding: 1rem;
       background-color: black;
       border-radius: 10px;
@@ -108,6 +108,10 @@
       flex-direction: row;
       justify-content: space-between;
       font-size: 1rem;
+  }
+
+  .off {
+      display: none;
   }
 
   .cardContent {
@@ -143,7 +147,7 @@
       display: none;
   }
 
- 
+
 
   .modal-header {
       background-color: #ae9ac9;
@@ -231,4 +235,9 @@
   .clicked {
       background-color: rgb(181, 201, 154);
       border-radius: 5px;
+  }
+
+
+  body::-webkit-scrollbar {
+      display: none;
   }
