@@ -1,18 +1,29 @@
 export default class Card {
-    static cardStorage = [];
+  constructor(title, content, duedate, important, completed) {
+    this.title = title;
+    this.content = content;
+    this.duedate = duedate;
+    this.important = important;
+    this.completed = completed;
+  }
 
-    constructor(title, content, duedate, important) {
-        this.title = title;
-        this.content = content;
-        this.duedate = duedate;
-        this.important = important;
+  static getCardData() {
+    const cardDataString = localStorage.getItem('cardData');
+    if (cardDataString) {
+      return JSON.parse(cardDataString);
     }
+    return [];
+  }
 
-    storeData() {
-        const { title, content, duedate, important = false } = this;
-        this.important = Boolean(important); // Convert to boolean
-        Card.cardStorage.push(this);
-        return  Card.cardStorage;
-    }
+  static storeCardData(cardData) {
+    const cardDataString = JSON.stringify(cardData);
+    localStorage.setItem('cardData', cardDataString);
+  }
 
+  storeData() {
+    const cardData = Card.getCardData();
+    cardData.push(this);
+    Card.storeCardData(cardData);
+    return cardData;
+  }
 }

@@ -19,19 +19,19 @@
                 <img class="logo" src="../asset/calendar.svg" alt="all logo">
                 <span class="text">All</span>
             </div>
-            <div class="today item">
+            <div class="today item" id="today">
                 <img src="../asset/today.svg" alt="today logo" class="logo">
                 <span class="text">Today</span>
             </div>
-            <div class="week item">
+            <div class="week item" id="week">
                 <img src="../asset/week.svg" alt="week logo" class="logo">
                 <span class="text">Week</span>
             </div>
-            <div class="important item">
+            <div class="importantbtn item" id="important">
                 <img src="../asset/important.svg" alt="important logo" class="logo">
                 <span class="text">Important</span>
             </div>
-            <div class="completed item">
+            <div class="completedbtn item" id="complete">
                 <img src="../asset/completed.svg" alt="completed logo" class="logo">
                 <span class="text">Completed</span>
             </div>
@@ -41,29 +41,27 @@
             </div>
         </div>
         <div class="display">
-            <p class="title"></p>
+            <p class="title" id="title">All</p>
             <div class="content-container"></div>
             <div class="modal-container">
                 <form id="form" action="submit">
                     <header class="modal-header">Add New Plan</header>
                     <div class="add-container">
-                        <div class="add-sidebar">
-                            <div class="todo">To do</div>
-                            <div class="project">Project</div>
-                        </div>
+
                         <div class="add-input">
-                            <textarea class="add-title input" placeholder="Title:....." cols="70" rows="1"></textarea>
+                            <textarea class="add-title input" placeholder="Title:....." cols="40" rows="1"></textarea>
                             <textarea class="add-content input" placeholder="Write something" rows="14"
-                                cols="70"></textarea>
+                                cols="40"></textarea>
                             <div class="bottom-infor">
                                 <div class="due-date">
                                     <label for="duedate-input">Due Date:</label>
-                                    <input type="date" class="duedate-input input" value="today">
+                                    <input type="date" class="duedate-input input" name="date" id="date">
                                 </div>
                                 <div class="bottom">
                                     <div class="priority-input">
                                         <p>Priority:</p>
                                         <button class="important-btn" type="button">Important</button>
+                                        <button class="completed-btn" type="button">Completed</button>
                                     </div>
                                     <button class="add-todo" type="submit">ADD TO DO</button>
                                 </div>
@@ -72,10 +70,10 @@
                     </div>
                 </form>
             </div>
-    </div>
+        </div>
 
 
-    <script type="module" src="./main.js"></script>
+        <script type="module" src="./main.js"></script>
 </body>
 
 </html>
